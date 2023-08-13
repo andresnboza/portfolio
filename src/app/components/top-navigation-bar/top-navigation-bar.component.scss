@@ -1,0 +1,11 @@
+@import '/src/assets/styles/global.scss';
+
+.option {
+    height: 50px;
+    @extend .verticallyAlign;
+}
+
+p {
+    margin: 0px;
+    padding: 0px;
+}

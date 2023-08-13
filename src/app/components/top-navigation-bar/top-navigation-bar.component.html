@@ -1,0 +1,15 @@
+<div class="container" *ngIf="words$ | async as words">
+    <div class="row">
+        <div class="col-sm-12 col-md-4 clickableV2 option">
+            <p>andresnboza</p>
+        </div>
+        <div class="col-sm-12 col-md-8 option">
+            <ul class="row">
+                <li class="col-md-3 clickable">{{ words.topNavigation.knowMe }}</li>
+                <li class="col-md-3 clickable">{{ words.topNavigation.projects }}</li>
+                <li class="col-md-3 clickable">{{ words.topNavigation.blog }}</li>
+                <li class="col-md-3 clickable">{{ words.topNavigation.contact }}</li>
+            </ul>
+        </div>
+    </div>
+</div>

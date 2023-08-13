@@ -1,0 +1,7 @@
+@import '/src/assets/styles/global.scss';
+
+.container {
+    @extend .fullWidthHeight;
+    @extend .vBoxes;
+    justify-content: space-between;
+}
