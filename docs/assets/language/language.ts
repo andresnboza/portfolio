@@ -4,5 +4,11 @@ export interface ILanguage {
         projects: string;
         knowMe: string;
         blog: string;
+    },
+    contactLinks: {
+        linkedin: string;
+    },
+    mainBanner: {
+        noteOne: string;
     }
 }

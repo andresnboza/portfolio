@@ -15,6 +15,8 @@ export class TopNavigationBarComponent {
   words$!: Observable<ILanguage>;
   language!: Observable<string>;
 
+  externalUrl: string = '';
+
   constructor(private store: Store<fromApp.AppState>, private generalService: GeneralService) {
     this.words$ = this.store.select(selectWords);
     this.language = this.store.select(selectLanguage);

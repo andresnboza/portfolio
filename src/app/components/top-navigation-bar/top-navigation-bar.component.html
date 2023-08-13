@@ -1,7 +1,11 @@
 <div class="container" *ngIf="words$ | async as words">
     <div class="row">
         <div class="col-sm-12 col-md-4 clickableV2 option">
-            <p>andresnboza</p>
+            <p>
+                <a [href]="words.contactLinks.linkedin" target="_blank">
+                    @andresnboza
+                </a>
+            </p>
         </div>
         <div class="col-sm-12 col-md-8 option">
             <ul class="row">

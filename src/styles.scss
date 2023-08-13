@@ -13,3 +13,8 @@ html, body {
     background-color: $backgroundColor_dark;
     color: $fontColor_dark;
 }
+
+a {
+    text-decoration: none;
+    color: $fontColor_dark; 
+}
