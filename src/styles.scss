@@ -1,9 +1,15 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
+$backgroundColor_dark: #2a2a2a;
+$fontColor_dark: white;
+
+
 /* You can add global styles to this file, and also import other style files */
 html, body {
     height: 100%;
     width: 100%;
     padding: 0%;
     margin: 0%;
+    background-color: $backgroundColor_dark;
+    color: $fontColor_dark;
 }
