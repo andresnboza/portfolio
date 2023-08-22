@@ -1,0 +1,82 @@
+@import '/src/styles.scss';
+
+.contact {
+    background-color: $contactBackgroundColor;
+    @extend .hBoxes;
+    @extend .fullWidth;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    form {
+        flex-grow: 1;
+        background-color: $formBackgroundImage;
+        border-radius: $formBorderRadius;
+        border: 1px solid rgb(49, 49, 49);
+        padding: $innerFormPadding;
+        margin: 20px;
+        max-width: 600px;
+        p.touch {
+            margin: 0 0 10px;
+            font-size: 16px;
+            font-weight: 400;
+            color: #707476;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        p.formDescription {
+            color: #bbbbbb;
+        }
+    }
+    .discuss {
+        flex-grow: 1;
+        min-width: 400px;
+        .contactMethod {
+            @extend .hBoxes;
+            margin: 20px 60px;
+            .icon {
+                height: 60px;
+                width: 60px;
+                @extend .vBoxes;
+                justify-content: center;
+                align-self: center;
+                padding: 5px;
+                border-radius: 5px;
+                border: 1px solid rgb(49, 49, 49);
+               .insideIcon {
+                    @extend .hBoxes;
+                    justify-content: center
+               }
+            }
+            .txt {
+                @extend .vBoxes;
+                justify-content: center;
+                padding-left: 25px;
+                p.title {
+                    @extend .noPaddintNoMargin;
+                    font-size: 1.25rem;
+                    font-weight: 500;
+                    line-height: 1.2;
+                }
+                p.description {
+                    @extend .noPaddintNoMargin;
+                    font-size: 15px;
+                    color: #ffffffb3;
+                }
+            }
+        }
+        .mainTitle {
+            font-size: 1.75rem;
+            margin: 20px 60px;
+            font-weight: 500;
+            line-height: 1.2;
+        }
+    }
+}
+
+.sideBySide {
+    @extend .hBoxes;
+    @extend .fullWidth;
+    .item {
+        flex-grow: 1;
+    }
+}

@@ -1,0 +1,50 @@
+<div class="contact">
+
+    <form [formGroup]="form" (ngSubmit)="submit()">
+        <p class="touch">GET IN TOUCH</p>
+        <p class="formDescription" >Get in touch with us for any kind of help. We are here to give you the best and also here to help you to find
+            your projects.</p>
+
+        <div class="sideBySide">
+            <app-input-text class="item" formControlName="name"></app-input-text>
+            &nbsp;
+            <app-input-text class="item" formControlName="email"></app-input-text>
+        </div>
+        <app-input-text formControlName="subject"></app-input-text>
+        <app-input-textarea [avoidSizeModification]="true"  formControlName="message"></app-input-textarea>
+
+        <button mat-raised-button color="primary" matBadgePosition="before" matBadgeColor="accent">
+            Send Message
+        </button>
+    </form>
+
+    <!-- Discuss the project -->
+    <div class="discuss">
+        <p class="mainTitle">{{ letsDiscuss }}</p>
+        <!-- Phone -->
+        <div class="contactMethod">
+            <div class="icon">
+                <div class="insideIcon">
+                    <mat-icon >phone</mat-icon>
+                </div>
+            </div>
+            <div class="txt">
+                <p class="title">Phone</p>
+                <p class="description">{{ phone }}</p>
+            </div>
+        </div>
+        <!-- Phone -->
+        <div class="contactMethod">
+            <div class="icon">
+                <div class="insideIcon">
+                    <mat-icon >email</mat-icon>
+                </div>
+            </div>
+            <div class="txt">
+                <p class="title">Email</p>
+                <p class="description">{{ email }}</p>
+            </div>
+        </div>
+    </div>
+
+</div>
