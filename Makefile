@@ -1,7 +1,7 @@
-build:
-	ng build --output-path docs --base-href /portfolio/
+build-prod:
+	ng build --configuration=production
+
 push:
 	git add .
-	git commit -m "Auto deploy"
+	git commit -m "update"
 	git push
-deploy: build push
