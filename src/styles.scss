@@ -3,16 +3,6 @@
 $backgroundColor_dark: #2a2a2a;
 $fontColor_dark: white;
 
-$innerFormPadding: 20px;
-$formBackgroundImage: #0e0e0e;
-
-$contactBackgroundColor: black;
-$formBorderRadius: 20px;
-$formMargin: 50px;
-
-$inputBorderRadius: 10px;
-
-
 /* You can add global styles to this file, and also import other style files */
 html, body {
     height: 100%;
@@ -21,83 +11,4 @@ html, body {
     margin: 0%;
     background-color: $backgroundColor_dark;
     color: $fontColor_dark;
-}
-
-a {
-    text-decoration: none;
-    color: $fontColor_dark; 
-}
-
-.fullWidthHeight {
-    height: 100%;
-    width: 100%;
-}
-
-.fullWidth {
-    width: 100%;
-}
-
-.halfWidth {
-    width: 50%;
-}
-
-.noPaddintNoMargin {
-    padding: 0%;
-    margin: 0%;
-}
-
-.vBoxes {
-    display: flex;
-    flex-direction: column;
-}
-
-.hBoxes {
-    display: flex;
-    flex-direction: row;
-}
-
-.verticallyAlign {
-    @extend .vBoxes;
-    justify-content: center
-}
-
-ul {
-    list-style-type: none;
-    margin: 0%;
-    li {
-        text-align: center;
-        @extend .verticallyAlign;
-    }
-    height: 100%;
-}
-.clickableV2:hover {
-    cursor: pointer;
-}
-.clickable:hover {
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.1);
-}
-
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-.input {
-    background-color: $formBackgroundImage;
-    border-radius: $formBorderRadius;
-    color: white;
-    border: 1px solid rgb(49, 49, 49);
-}
-
-.mdc-text-field--filled:not(.mdc-text-field--disabled) {
-    border-radius: $inputBorderRadius;
-    background-color: $backgroundColor_dark;
-}
-
-.mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
-    color: white;
-}
-
-.mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label {
-    color: white;
 }

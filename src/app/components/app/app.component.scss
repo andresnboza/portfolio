@@ -1,9 +1,0 @@
-@import '/src/styles.scss';
-
-.mainContainer {
-    @extend .fullWidthHeight;
-    @extend .vBoxes;
-    justify-content: space-between;
-    margin: 0% !important;
-    padding: 0%;
-}
