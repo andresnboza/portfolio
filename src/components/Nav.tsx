@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { personal } from '../data/resume'
 import './Nav.css'
 
-const links = [
+const portfolioLinks = [
   { label: 'About', href: '#about' },
   { label: 'Experience', href: '#experience' },
   { label: 'Education', href: '#education' },
@@ -13,6 +14,8 @@ const links = [
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
   const [progress, setProgress] = useState(0)
+  const location = useLocation()
+  const isServices = location.pathname === '/services'
 
   useEffect(() => {
     const handler = () => {
@@ -29,15 +32,20 @@ export default function Nav() {
     <nav className={`nav${scrolled ? ' nav--scrolled' : ''}`}>
       <div className="nav__progress" style={{ width: `${progress}%` }} />
       <div className="nav__inner">
-        <a href="#hero" className="nav__logo">
+        <Link to="/" className="nav__logo">
           {personal.name.split(' ')[0].toLowerCase()}<span className="nav__logo-accent">.</span>
-        </a>
+        </Link>
         <ul className="nav__links">
-          {links.map(l => (
+          {!isServices && portfolioLinks.map(l => (
             <li key={l.href}>
               <a href={l.href} className="nav__link">{l.label}</a>
             </li>
           ))}
+          {isServices && (
+            <li>
+              <Link to="/" className="nav__link">Portfolio</Link>
+            </li>
+          )}
           <li>
             <a
               href={personal.github}
@@ -52,7 +60,9 @@ export default function Nav() {
             </a>
           </li>
           <li>
-            <a href="#contact" className="nav__cta">Get in touch</a>
+            <Link to="/services" className={`nav__cta${isServices ? ' nav__cta--active' : ''}`}>
+              Let's Talk
+            </Link>
           </li>
         </ul>
       </div>

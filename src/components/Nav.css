@@ -109,6 +109,12 @@
   box-shadow: 0 0 16px var(--accent-glow);
 }
 
+.nav__cta--active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
 @media (max-width: 640px) {
   .nav__links {
     gap: 1rem;

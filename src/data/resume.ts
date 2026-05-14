@@ -105,12 +105,14 @@ export const projects: Project[] = [
     name: 'Oil Terminal Management Platform',
     description: 'Microservices system for a global oil terminal client with async messaging and SAP/ERP integrations.',
     longDescription:
-      'A complex, distributed microservices platform built for a global oil terminal management client. The system handles real-time cargo tracking, invoice automation, and inventory flows across multiple terminals worldwide.',
+      'A complex, distributed microservices platform for a global oil terminal management client. Brought in to drive production readiness — stabilizing the system, eliminating critical bugs, improving response times, and delivering new features while owning end-to-end deployment.',
     highlights: [
+      'Led production readiness: resolved critical bugs, stabilized deployment pipelines, and reduced system downtime',
+      'Evaluated and improved API response times through profiling, query optimization, and caching strategies',
       'Implemented async communication via Azure Service Bus with dead-letter queue handling and retry policies',
-      'Architected OAuth2-secured integrations with SAP/ERP modules for invoice and inventory management',
-      'Reduced cloud costs significantly by optimizing Azure Monitor telemetry and restructuring logging strategies',
-      'Performed deep-dive troubleshooting of Azure Container Apps networking and deployment pipelines',
+      'Architected OAuth2-secured SAP/ERP integrations managing invoice and inventory flows',
+      'Developed new product features from design to deployment on Azure Container Apps',
+      'Reduced cloud costs by optimizing Azure Monitor telemetry and restructuring logging strategies',
     ],
     tech: ['Azure Service Bus', 'Azure Container Apps', 'SAP/ERP', 'OAuth2', '.NET', 'TypeScript', 'Entity Framework'],
     featured: true,
