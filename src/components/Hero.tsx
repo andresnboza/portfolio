@@ -1,9 +1,11 @@
 import { useTranslation } from 'react-i18next'
 import { personal } from '../data/resume'
+import { useScrollNav } from '../hooks/useScrollNav'
 import './Hero.css'
 
 export default function Hero() {
   const { t } = useTranslation()
+  const scrollTo = useScrollNav()
   return (
     <section id="hero" className="hero">
       <div className="hero__bg-grid" aria-hidden />
@@ -17,7 +19,7 @@ export default function Hero() {
           <h2 className="hero__title hero-anim hero-anim--3">{personal.title}</h2>
           <p className="hero__tagline hero-anim hero-anim--4">{t('hero.tagline')}</p>
           <div className="hero__actions hero-anim hero-anim--5">
-            <a href="#projects" className="btn btn--primary">{t('hero.viewWork')}</a>
+            <button className="btn btn--primary" onClick={() => scrollTo('projects')}>{t('hero.viewWork')}</button>
             <a
               href={personal.github}
               target="_blank"

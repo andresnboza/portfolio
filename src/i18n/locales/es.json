@@ -140,6 +140,9 @@
     "sendingBtn": "Enviando…",
     "successMsg": "¡Mensaje enviado! Te responderé pronto.",
     "errorMsg": "Algo salió mal. Intenta escribirme directamente.",
+    "whatsappHint": "Envíame un mensaje rápido",
+    "githubHint": "Mira mi trabajo open source",
+    "linkedinHint": "Conectemos profesionalmente",
     "builtBy": "Diseñado y construido por"
   },
   "services": {

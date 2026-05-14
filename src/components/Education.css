@@ -83,3 +83,8 @@
   background: var(--text-muted);
   flex-shrink: 0;
 }
+
+@media (max-width: 480px) {
+  .edu__grid { grid-template-columns: 1fr; }
+  .edu__card { padding: 1.1rem; }
+}
