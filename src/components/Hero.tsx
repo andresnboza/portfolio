@@ -1,7 +1,9 @@
+import { useTranslation } from 'react-i18next'
 import { personal } from '../data/resume'
 import './Hero.css'
 
 export default function Hero() {
+  const { t } = useTranslation()
   return (
     <section id="hero" className="hero">
       <div className="hero__bg-grid" aria-hidden />
@@ -10,12 +12,12 @@ export default function Hero() {
 
       <div className="container hero__inner">
         <div className="hero__text">
-          <p className="hero__greeting hero-anim hero-anim--1">Hi, I'm</p>
+          <p className="hero__greeting hero-anim hero-anim--1">{t('hero.greeting')}</p>
           <h1 className="hero__name hero-anim hero-anim--2">{personal.name}</h1>
           <h2 className="hero__title hero-anim hero-anim--3">{personal.title}</h2>
-          <p className="hero__tagline hero-anim hero-anim--4">{personal.tagline}</p>
+          <p className="hero__tagline hero-anim hero-anim--4">{t('hero.tagline')}</p>
           <div className="hero__actions hero-anim hero-anim--5">
-            <a href="#projects" className="btn btn--primary">View my work</a>
+            <a href="#projects" className="btn btn--primary">{t('hero.viewWork')}</a>
             <a
               href={personal.github}
               target="_blank"
@@ -27,7 +29,7 @@ export default function Hero() {
               </svg>
               GitHub
             </a>
-            <a href={`mailto:${personal.email}`} className="btn btn--ghost">Contact me</a>
+            <a href={`mailto:${personal.email}`} className="btn btn--ghost">{t('hero.contact')}</a>
           </div>
         </div>
 

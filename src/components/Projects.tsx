@@ -1,4 +1,5 @@
 import { useState, useCallback } from 'react'
+import { useTranslation } from 'react-i18next'
 import { projects, Project } from '../data/resume'
 import { useInView } from '../hooks/useInView'
 import ProjectModal from './ProjectModal'
@@ -37,6 +38,9 @@ interface CardProps {
 }
 
 function ProjectCard({ project: p, onClick, small }: CardProps) {
+  const { t } = useTranslation()
+  const description = t(`projects.items.${p.i18nKey}.description`)
+
   return (
     <div
       className={`project-card${small ? ' project-card--small' : ' project-card--featured'}`}
@@ -60,7 +64,7 @@ function ProjectCard({ project: p, onClick, small }: CardProps) {
           )}
         </div>
       </div>
-      <p className="project-card__desc">{p.description}</p>
+      <p className="project-card__desc">{description}</p>
       <div className="project-card__footer">
         <div className="project-card__tech">
           {p.tech.slice(0, 4).map(t => (
@@ -71,7 +75,7 @@ function ProjectCard({ project: p, onClick, small }: CardProps) {
           )}
         </div>
         <span className="project-card__cta">
-          Details <ArrowIcon />
+          {t('projects.detailsBtn')} <ArrowIcon />
         </span>
       </div>
     </div>
@@ -79,6 +83,7 @@ function ProjectCard({ project: p, onClick, small }: CardProps) {
 }
 
 export default function Projects() {
+  const { t } = useTranslation()
   const { ref: headRef, inView: headVisible } = useInView()
   const { ref: featRef, inView: featVisible } = useInView()
   const { ref: otherRef, inView: otherVisible } = useInView()
@@ -97,8 +102,8 @@ export default function Projects() {
             ref={headRef as React.RefObject<HTMLDivElement>}
             className={`animate anim-fade-up${headVisible ? ' is-visible' : ''}`}
           >
-            <p className="section-label">Projects</p>
-            <h2 className="section-title">Things I've built and helped transform</h2>
+            <p className="section-label">{t('projects.label')}</p>
+            <h2 className="section-title">{t('projects.title')}</h2>
           </div>
 
           <div
@@ -115,7 +120,7 @@ export default function Projects() {
               ref={otherRef as React.RefObject<HTMLDivElement>}
               className={`projects__others stagger-children${otherVisible ? ' is-visible' : ''}`}
             >
-              <p className="projects__others-label">Other projects</p>
+              <p className="projects__others-label">{t('projects.otherLabel')}</p>
               <div className="projects__others-grid">
                 {others.map((p, i) => (
                   <ProjectCard key={i} project={p} onClick={setSelected} small />

@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { useInView } from '../hooks/useInView'
 import { personal } from '../data/resume'
 import './ServicesPage.css'
@@ -77,148 +78,37 @@ function CrFlagIcon() {
   return <span className="flag-icon">🇨🇷</span>
 }
 
-// ── Data ─────────────────────────────────────────────────────────────────────
-
-const tiers = [
-  {
-    id: 'startup',
-    label: 'Startup / Small Business',
-    headline: 'You need a trusted partner, not a vendor.',
-    body: "You have an idea or a problem. You need someone who can think it through with you, architect the right solution, and build it — fast. I work directly with you, end to end. No middlemen, no overhead, just sharp execution.",
-    highlights: [
-      'Direct access to a senior engineer',
-      'MVP to production in weeks, not months',
-      'Mobile, web, or AI — I do it all',
-      'Flexible engagement: hourly, project, or retainer',
-    ],
-    cta: 'Talk to Andres',
-    ctaHref: `mailto:${personal.email}?subject=Project Inquiry`,
-    accent: 'tier--startup',
-    badge: 'Most personal',
-  },
-  {
-    id: 'medium',
-    label: 'Growing Business',
-    headline: 'You need structure, speed, and a technical leader.',
-    body: "Your product is growing and you need someone who can lead architecture decisions, scale your team, and own delivery. I step in as your technical anchor — designing systems that grow with you and bringing in sharp engineers when the scope demands it.",
-    highlights: [
-      'Andres as lead architect and delivery owner',
-      'Scalable system design from day one',
-      'Team augmentation as the project scales',
-      'AI-first approach built into your roadmap',
-      'Full-stack: frontend, backend, mobile, data',
-    ],
-    cta: 'Let\'s scope your project',
-    ctaHref: `mailto:${personal.email}?subject=Growing Business Inquiry`,
-    accent: 'tier--medium',
-    badge: 'Most popular',
-    featured: true,
-  },
-  {
-    id: 'enterprise',
-    label: 'Enterprise / Large Corporation',
-    headline: 'You need a proven team across borders.',
-    body: "Large-scale transformation, modernization, or a greenfield platform? We bring a vetted team of senior engineers placed in both the US and Costa Rica — overlapping time zones, competitive rates, and the caliber you'd expect from top-tier firms.",
-    highlights: [
-      'Senior engineers in the US and Costa Rica',
-      'US time-zone overlap for seamless collaboration',
-      'AI, cloud, microservices, and data at scale',
-      'Staff augmentation or full delivery model',
-      'NDA-ready, SOC-2 aware, enterprise processes',
-    ],
-    cta: 'Request a team',
-    ctaHref: `mailto:${personal.email}?subject=Enterprise Team Inquiry`,
-    accent: 'tier--enterprise',
-    badge: 'Full team',
-  },
-]
-
-const capabilities = [
-  {
-    icon: <MobileIcon />,
-    title: 'Mobile',
-    color: 'cap--mobile',
-    items: [
-      'iOS & Android (React Native)',
-      'App Store & Play Store publishing',
-      'Offline-first architecture',
-      'Push notifications & real-time sync',
-      'Performance optimization',
-    ],
-  },
-  {
-    icon: <WebIcon />,
-    title: 'Web',
-    color: 'cap--web',
-    items: [
-      'React / Next.js SPAs & SSR',
-      'Full-stack APIs (Node, .NET, Python)',
-      'E-commerce & SaaS platforms',
-      'High-performance frontends',
-      'Accessibility & SEO',
-    ],
-  },
-  {
-    icon: <DataIcon />,
-    title: 'Data & AI',
-    color: 'cap--data',
-    items: [
-      'LLM-powered agents & chatbots',
-      'RAG pipelines & vector search',
-      'Data pipelines & ETL',
-      'Analytics dashboards',
-      'AI feature integration into existing products',
-    ],
-  },
-  {
-    icon: <CloudIcon />,
-    title: 'Cloud & DevOps',
-    color: 'cap--cloud',
-    items: [
-      'Azure, AWS, GCP architecture',
-      'Kubernetes & container orchestration',
-      'CI/CD pipelines & GitOps',
-      'Infrastructure as Code',
-      'Cost optimization',
-    ],
-  },
-]
-
-const reasons = [
-  {
-    icon: <BrainIcon />,
-    title: 'AI-first mindset',
-    body: 'Every solution is evaluated for AI leverage — from automation to intelligent features built directly into your product.',
-  },
-  {
-    icon: <UsaFlagIcon />,
-    title: 'US & Costa Rica coverage',
-    body: 'Engineers placed in both markets. Competitive rates with US-overlap time zones — the best of nearshore without the trade-offs.',
-  },
-  {
-    icon: <CloudIcon />,
-    title: 'Senior-level only',
-    body: 'No juniors parachuted into your codebase. Every engineer on your project has the scar tissue to navigate complexity.',
-  },
-  {
-    icon: <CheckIcon />,
-    title: 'End-to-end delivery',
-    body: 'From architecture to app store. We own the full lifecycle so you never have to coordinate between five different vendors.',
-  },
-]
-
 // ── Component ─────────────────────────────────────────────────────────────────
 
+const tierMeta = [
+  { id: 'startup', accent: 'tier--startup', featured: false, subjectKey: 'Project Inquiry' },
+  { id: 'medium',  accent: 'tier--medium',  featured: true,  subjectKey: 'Growing Business Inquiry' },
+  { id: 'enterprise', accent: 'tier--enterprise', featured: false, subjectKey: 'Enterprise Team Inquiry' },
+]
+
+const capMeta = [
+  { id: 'mobile', icon: <MobileIcon />, color: 'cap--mobile' },
+  { id: 'web',    icon: <WebIcon />,    color: 'cap--web' },
+  { id: 'data',   icon: <DataIcon />,   color: 'cap--data' },
+  { id: 'cloud',  icon: <CloudIcon />,  color: 'cap--cloud' },
+]
+
+const reasonMeta = [
+  { id: 'ai',       icon: <BrainIcon /> },
+  { id: 'team',     icon: <UsaFlagIcon /> },
+  { id: 'senior',   icon: <CloudIcon /> },
+  { id: 'delivery', icon: <CheckIcon /> },
+]
+
 export default function ServicesPage() {
+  const { t } = useTranslation()
   const { ref: heroRef, inView: heroVisible } = useInView()
   const { ref: tiersRef, inView: tiersVisible } = useInView()
   const { ref: capRef, inView: capVisible } = useInView()
   const { ref: whyRef, inView: whyVisible } = useInView()
   const { ref: ctaRef, inView: ctaVisible } = useInView()
 
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+  useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
     <div className="services-page">
@@ -232,21 +122,17 @@ export default function ServicesPage() {
           ref={heroRef as React.RefObject<HTMLDivElement>}
           className={`container svc-hero__inner stagger-children${heroVisible ? ' is-visible' : ''}`}
         >
-          <p className="section-label">Work with us</p>
+          <p className="section-label">{t('services.label')}</p>
           <h1 className="svc-hero__title">
-            Let's talk about<br />
-            <span className="svc-hero__title-accent">your project.</span>
+            {t('services.heroTitle')}<br />
+            <span className="svc-hero__title-accent">{t('services.heroTitleAccent')}</span>
           </h1>
-          <p className="svc-hero__sub">
-            Whether you're a founder with an idea, a business ready to scale,
-            or a corporation modernizing at speed — we have the right team, the right experience,
-            and the right approach to make it happen.
-          </p>
+          <p className="svc-hero__sub">{t('services.heroSub')}</p>
           <div className="svc-hero__badges">
-            <span className="svc-badge"><MobileIcon /> Mobile</span>
-            <span className="svc-badge"><WebIcon /> Web</span>
-            <span className="svc-badge"><DataIcon /> Data &amp; AI</span>
-            <span className="svc-badge"><CloudIcon /> Cloud</span>
+            <span className="svc-badge"><MobileIcon /> {t('services.capabilities.mobile.title')}</span>
+            <span className="svc-badge"><WebIcon /> {t('services.capabilities.web.title')}</span>
+            <span className="svc-badge"><DataIcon /> {t('services.capabilities.data.title')}</span>
+            <span className="svc-badge"><CloudIcon /> {t('services.capabilities.cloud.title')}</span>
           </div>
           <div className="svc-hero__flags">
             <span><UsaFlagIcon /> United States</span>
@@ -263,30 +149,36 @@ export default function ServicesPage() {
             ref={tiersRef as React.RefObject<HTMLDivElement>}
             className={`animate anim-fade-up${tiersVisible ? ' is-visible' : ''}`}
           >
-            <p className="section-label">Who we help</p>
-            <h2 className="section-title">The right fit for every scale</h2>
+            <p className="section-label">{t('services.whoLabel')}</p>
+            <h2 className="section-title">{t('services.whoTitle')}</h2>
           </div>
           <div className="tiers-grid">
-            {tiers.map((t) => (
-              <div key={t.id} className={`tier-card ${t.accent}${t.featured ? ' tier-card--featured' : ''}`}>
-                {t.featured && <div className="tier-card__glow" aria-hidden />}
-                <div className="tier-card__badge">{t.badge}</div>
-                <p className="tier-card__label">{t.label}</p>
-                <h3 className="tier-card__headline">{t.headline}</h3>
-                <p className="tier-card__body">{t.body}</p>
-                <ul className="tier-card__list">
-                  {t.highlights.map((h, i) => (
-                    <li key={i}>
-                      <span className="tier-card__check"><CheckIcon /></span>
-                      {h}
-                    </li>
-                  ))}
-                </ul>
-                <a href={t.ctaHref} className={`tier-card__cta${t.featured ? ' tier-card__cta--featured' : ''}`}>
-                  {t.cta} <ArrowIcon />
-                </a>
-              </div>
-            ))}
+            {tierMeta.map((tier) => {
+              const highlights = t(`services.tiers.${tier.id}.highlights`, { returnObjects: true }) as string[]
+              return (
+                <div key={tier.id} className={`tier-card ${tier.accent}${tier.featured ? ' tier-card--featured' : ''}`}>
+                  {tier.featured && <div className="tier-card__glow" aria-hidden />}
+                  <div className="tier-card__badge">{t(`services.tiers.${tier.id}.badge`)}</div>
+                  <p className="tier-card__label">{t(`services.tiers.${tier.id}.label`)}</p>
+                  <h3 className="tier-card__headline">{t(`services.tiers.${tier.id}.headline`)}</h3>
+                  <p className="tier-card__body">{t(`services.tiers.${tier.id}.body`)}</p>
+                  <ul className="tier-card__list">
+                    {highlights.map((h, i) => (
+                      <li key={i}>
+                        <span className="tier-card__check"><CheckIcon /></span>
+                        {h}
+                      </li>
+                    ))}
+                  </ul>
+                  <a
+                    href={`mailto:${personal.email}?subject=${tier.subjectKey}`}
+                    className={`tier-card__cta${tier.featured ? ' tier-card__cta--featured' : ''}`}
+                  >
+                    {t(`services.tiers.${tier.id}.cta`)} <ArrowIcon />
+                  </a>
+                </div>
+              )
+            })}
           </div>
         </div>
       </section>
@@ -298,24 +190,24 @@ export default function ServicesPage() {
             ref={capRef as React.RefObject<HTMLDivElement>}
             className={`animate anim-fade-up${capVisible ? ' is-visible' : ''}`}
           >
-            <p className="section-label">What we build</p>
-            <h2 className="section-title">Full-spectrum delivery</h2>
+            <p className="section-label">{t('services.capLabel')}</p>
+            <h2 className="section-title">{t('services.capTitle')}</h2>
           </div>
           <div className={`cap-grid stagger-children${capVisible ? ' is-visible' : ''}`}>
-            {capabilities.map((c) => (
-              <div key={c.title} className={`cap-card ${c.color}`}>
-                <div className="cap-card__icon">{c.icon}</div>
-                <h3 className="cap-card__title">{c.title}</h3>
-                <ul className="cap-card__list">
-                  {c.items.map((item, i) => (
-                    <li key={i}>
-                      <span className="cap-dot" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+            {capMeta.map((c) => {
+              const items = t(`services.capabilities.${c.id}.items`, { returnObjects: true }) as string[]
+              return (
+                <div key={c.id} className={`cap-card ${c.color}`}>
+                  <div className="cap-card__icon">{c.icon}</div>
+                  <h3 className="cap-card__title">{t(`services.capabilities.${c.id}.title`)}</h3>
+                  <ul className="cap-card__list">
+                    {items.map((item, i) => (
+                      <li key={i}><span className="cap-dot" />{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              )
+            })}
           </div>
         </div>
       </section>
@@ -327,15 +219,15 @@ export default function ServicesPage() {
             ref={whyRef as React.RefObject<HTMLDivElement>}
             className={`animate anim-fade-up${whyVisible ? ' is-visible' : ''}`}
           >
-            <p className="section-label">Why us</p>
-            <h2 className="section-title">Built different</h2>
+            <p className="section-label">{t('services.whyLabel')}</p>
+            <h2 className="section-title">{t('services.whyTitle')}</h2>
           </div>
           <div className={`why-grid stagger-children${whyVisible ? ' is-visible' : ''}`}>
-            {reasons.map((r, i) => (
-              <div key={i} className="why-card">
+            {reasonMeta.map((r) => (
+              <div key={r.id} className="why-card">
                 <div className="why-card__icon">{r.icon}</div>
-                <h3 className="why-card__title">{r.title}</h3>
-                <p className="why-card__body">{r.body}</p>
+                <h3 className="why-card__title">{t(`services.reasons.${r.id}.title`)}</h3>
+                <p className="why-card__body">{t(`services.reasons.${r.id}.body`)}</p>
               </div>
             ))}
           </div>
@@ -349,20 +241,15 @@ export default function ServicesPage() {
           className={`container svc-cta__inner animate anim-scale-in${ctaVisible ? ' is-visible' : ''}`}
         >
           <div className="svc-cta__glow" aria-hidden />
-          <p className="section-label">Ready?</p>
-          <h2 className="svc-cta__title">
-            Tell us what you're building.
-          </h2>
-          <p className="svc-cta__sub">
-            No commitment. No sales deck. Just a conversation about your problem
-            and how we can solve it.
-          </p>
+          <p className="section-label">{t('services.ctaLabel')}</p>
+          <h2 className="svc-cta__title">{t('services.ctaTitle')}</h2>
+          <p className="svc-cta__sub">{t('services.ctaSub')}</p>
           <div className="svc-cta__actions">
             <a href={`mailto:${personal.email}?subject=Project Inquiry`} className="btn btn--primary btn--lg">
-              Start a conversation <ArrowIcon />
+              {t('services.ctaBtn')} <ArrowIcon />
             </a>
             <Link to="/" className="btn btn--ghost btn--lg">
-              Back to portfolio
+              {t('services.backBtn')}
             </Link>
           </div>
         </div>
@@ -370,7 +257,7 @@ export default function ServicesPage() {
 
       <footer className="footer">
         <div className="container">
-          <span>Andres Navarrete · AI Architect & Senior Software Engineer</span>
+          <span>{personal.name} · {personal.title}</span>
         </div>
       </footer>
     </div>

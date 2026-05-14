@@ -1,21 +1,27 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { personal } from '../data/resume'
 import './Nav.css'
-
-const portfolioLinks = [
-  { label: 'About', href: '#about' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Education', href: '#education' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Contact', href: '#contact' },
-]
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
   const [progress, setProgress] = useState(0)
   const location = useLocation()
   const isServices = location.pathname === '/services'
+  const { t, i18n } = useTranslation()
+
+  const portfolioLinks = [
+    { label: t('nav.about'), href: '#about' },
+    { label: t('nav.experience'), href: '#experience' },
+    { label: t('nav.education'), href: '#education' },
+    { label: t('nav.projects'), href: '#projects' },
+    { label: t('nav.contact'), href: '#contact' },
+  ]
+
+  function toggleLang() {
+    i18n.changeLanguage(i18n.language === 'en' ? 'es' : 'en')
+  }
 
   useEffect(() => {
     const handler = () => {
@@ -43,7 +49,7 @@ export default function Nav() {
           ))}
           {isServices && (
             <li>
-              <Link to="/" className="nav__link">Portfolio</Link>
+              <Link to="/" className="nav__link">{t('nav.portfolio')}</Link>
             </li>
           )}
           <li>
@@ -59,9 +65,19 @@ export default function Nav() {
               </svg>
             </a>
           </li>
+          <li className="nav__lang-li">
+            <button className="nav__lang" onClick={toggleLang} aria-label="Toggle language">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+              </svg>
+              {i18n.language === 'en' ? 'ES' : 'EN'}
+            </button>
+          </li>
           <li>
             <Link to="/services" className={`nav__cta${isServices ? ' nav__cta--active' : ''}`}>
-              Let's Talk
+              {t('nav.letsTalk')}
             </Link>
           </li>
         </ul>

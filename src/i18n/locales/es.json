@@ -1,0 +1,265 @@
+{
+  "nav": {
+    "about": "Sobre mí",
+    "experience": "Experiencia",
+    "education": "Educación",
+    "projects": "Proyectos",
+    "contact": "Contacto",
+    "portfolio": "Portafolio",
+    "letsTalk": "Hablemos"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "tagline": "Construyendo sistemas inteligentes que escalan — desde la arquitectura hasta el despliegue.",
+    "viewWork": "Ver mis proyectos",
+    "contact": "Contáctame"
+  },
+  "about": {
+    "label": "Sobre mí",
+    "title": "Lo que hago",
+    "bio": [
+      "Soy un Ingeniero de Software Senior con profunda experiencia en arquitectura de sistemas de IA. Diseño y construyo aplicaciones inteligentes — desde agentes impulsados por LLMs y pipelines RAG hasta APIs de nivel productivo y productos full-stack.",
+      "Mi enfoque es cerrar la brecha entre las capacidades de IA de vanguardia y la ingeniería real: construir sistemas que sean confiables, mantenibles y que realmente resuelvan el problema en cuestión.",
+      "He trabajado en todo el stack, liderado equipos multifuncionales y lanzado productos usados por miles de usuarios. Actualmente abierto a problemas interesantes en la intersección de la IA y el producto."
+    ]
+  },
+  "experience": {
+    "label": "Experiencia",
+    "title": "Dónde he trabajado",
+    "jobs": {
+      "serverless": [
+        "Lideré la preparación para producción: resolví errores críticos, estabilicé pipelines de despliegue y reduje el tiempo de inactividad del sistema",
+        "Evalué y mejoré los tiempos de respuesta de la API mediante perfilado, optimización de consultas y estrategias de caché",
+        "Implementé comunicación asíncrona via Azure Service Bus con manejo de colas de mensajes fallidos y políticas de reintento",
+        "Arquitecté integraciones SAP/ERP aseguradas con OAuth2 gestionando flujos de facturas e inventario",
+        "Desarrollé nuevas funcionalidades del producto desde el diseño hasta el despliegue en Azure Container Apps",
+        "Reduje costos en la nube optimizando la telemetría de Azure Monitor y reestructurando las estrategias de logging",
+        "Entregué una aplicación móvil para renta de equipos pesados a través del ciclo completo en las tiendas iOS y Android",
+        "Construí una plataforma web y móvil de lealtad con servicios backend escalables e interfaces frontend de alto rendimiento",
+        "Actué como puente técnico para equipos de QA mediante programación en parejas e inicié documentación técnica completa con diagramas de flujo arquitectónicos"
+      ],
+      "ibm": [
+        "Avancé la Plataforma de Gestión Multi-Cloud (MCMP) implementando prácticas GitOps con ArgoCD y manteniendo clústeres de Kubernetes",
+        "Diseñé pipelines CI/CD automatizados con GitHub Actions y Ansible para despliegues consistentes en múltiples nubes a nivel global",
+        "Creé plantillas estandarizadas de Infraestructura-como-Código para el aprovisionamiento de recursos en la nube con seguridad y cumplimiento en AWS, Azure y GCP"
+      ],
+      "midware": [
+        "Reduje el tiempo de migración de datos de una semana a dos horas mediante optimización rigurosa de base de datos",
+        "Desarrollé funcionalidades full-stack para empresas de e-commerce basadas en EE.UU. usando frameworks modernos de JavaScript"
+      ],
+      "grupoAsesor": [
+        "Contribuí a un framework propietario de .NET Core, mejorando plantillas de backend y desarrollo de interfaces"
+      ],
+      "ucr": [
+        "Diseñé y desplegué de forma independiente una aplicación integral con stack MEAN, liderando todo el SDLC"
+      ],
+      "tekExperts": [
+        "Proporcioné solución avanzada de problemas en servidores Linux, resolviendo caídas críticas del sistema y cuellos de botella de rendimiento"
+      ]
+    }
+  },
+  "education": {
+    "label": "Formación",
+    "title": "Educación y Certificaciones",
+    "degreeLabel": "Título",
+    "certLabel": "Certificación"
+  },
+  "projects": {
+    "label": "Proyectos",
+    "title": "Cosas que he construido y transformado",
+    "otherLabel": "Otros proyectos",
+    "detailsBtn": "Detalles",
+    "keyHighlights": "Aspectos clave",
+    "techStack": "Stack tecnológico",
+    "sourceBtn": "Código",
+    "liveBtn": "Demo en vivo",
+    "items": {
+      "oilTerminal": {
+        "description": "Sistema de microservicios para un cliente global de terminales de petróleo — lideré la preparación para producción, entrega de funcionalidades y despliegue.",
+        "longDescription": "Una plataforma de microservicios distribuida y compleja para un cliente global de gestión de terminales de petróleo. Incorporado para impulsar la preparación para producción — estabilizando el sistema, eliminando errores críticos, mejorando tiempos de respuesta y entregando nuevas funcionalidades.",
+        "highlights": [
+          "Lideré la preparación para producción: resolví errores críticos y reduje el tiempo de inactividad",
+          "Evalué y mejoré los tiempos de respuesta de la API mediante perfilado y optimización",
+          "Implementé comunicación asíncrona via Azure Service Bus con dead-lettering",
+          "Arquitecté integraciones SAP/ERP con OAuth2 para flujos de facturas e inventario",
+          "Desarrollé nuevas funcionalidades desde el diseño hasta el despliegue en Azure Container Apps",
+          "Reduje costos en la nube optimizando la telemetría de Azure Monitor"
+        ]
+      },
+      "heavyEquipment": {
+        "description": "Aplicación móvil multiplataforma para renta de equipos pesados, publicada en las tiendas iOS y Android.",
+        "longDescription": "Una aplicación móvil de ciclo completo para una empresa de renta de equipos pesados, permitiendo a los clientes explorar inventario, gestionar reservas y rastrear disponibilidad en tiempo real.",
+        "highlights": [
+          "Gestioné el ciclo completo de la app desde el desarrollo hasta la publicación en iOS y Android",
+          "Construí servicios backend escalables para manejar disponibilidad en tiempo real y flujos de reservas",
+          "Integré notificaciones push y seguimiento en la app para actualizaciones de estado de renta"
+        ]
+      },
+      "hospitality": {
+        "description": "Plataforma web y móvil de lealtad para una marca hotelera con frontend de alto rendimiento y backend escalable.",
+        "longDescription": "Una plataforma de lealtad y recompensas para una marca hotelera, permitiendo a los huéspedes acumular puntos, canjear recompensas y gestionar su perfil en web y móvil.",
+        "highlights": [
+          "Diseñé servicios backend escalables que soportan miles de transacciones de lealtad concurrentes",
+          "Construí interfaces frontend de alto rendimiento con UX fluida para web y móvil",
+          "Implementé autenticación segura y libro mayor de puntos con registros de auditoría"
+        ]
+      },
+      "mcmp": {
+        "description": "Plataforma basada en GitOps que gestiona clústeres de Kubernetes y pipelines CI/CD en AWS, Azure y GCP.",
+        "longDescription": "Contribuí a la Plataforma de Gestión Multi-Cloud (MCMP) de IBM/Kyndryl, permitiendo a clientes empresariales aprovisionar, gestionar y monitorear recursos en múltiples proveedores desde un único panel de control.",
+        "highlights": [
+          "Implementé flujos de trabajo GitOps con ArgoCD para despliegues declarativos versionados",
+          "Diseñé pipelines CI/CD automatizados con GitHub Actions y Ansible para inquilinos globales",
+          "Creé plantillas IaC estandarizadas para el aprovisionamiento de recursos con cumplimiento de seguridad"
+        ]
+      },
+      "ucr": {
+        "description": "Aplicación full-stack MEAN diseñada y desplegada de forma independiente para la Universidad de Costa Rica.",
+        "longDescription": "Una aplicación full-stack integral construida para la Universidad de Costa Rica, liderando de forma independiente todo el Ciclo de Vida de Desarrollo de Software desde la recopilación de requisitos hasta el despliegue en producción.",
+        "highlights": [
+          "Lideré el SDLC completo de forma independiente — arquitectura, desarrollo, pruebas y despliegue",
+          "Construí APIs RESTful con Node.js/Express y un frontend dinámico con Angular",
+          "Desplegado en infraestructura en la nube con automatización CI/CD"
+        ]
+      }
+    }
+  },
+  "contact": {
+    "label": "Contacto",
+    "title": "Trabajemos juntos",
+    "blurb": "Actualmente estoy abierto a nuevas oportunidades — ya sea un rol a tiempo completo, trabajo por contrato o una conversación sobre un problema interesante. Mi bandeja de entrada siempre está abierta.",
+    "nameLabel": "Nombre",
+    "namePlaceholder": "Tu nombre",
+    "emailLabel": "Tu correo",
+    "emailPlaceholder": "tu@correo.com",
+    "subjectLabel": "Asunto",
+    "subjectPlaceholder": "¿De qué se trata?",
+    "messageLabel": "Mensaje",
+    "messagePlaceholder": "Cuéntame sobre tu proyecto...",
+    "submitBtn": "Enviar mensaje",
+    "sendingBtn": "Enviando…",
+    "successMsg": "¡Mensaje enviado! Te responderé pronto.",
+    "errorMsg": "Algo salió mal. Intenta escribirme directamente.",
+    "builtBy": "Diseñado y construido por"
+  },
+  "services": {
+    "label": "Trabaja con nosotros",
+    "heroTitle": "Hablemos de",
+    "heroTitleAccent": "tu proyecto.",
+    "heroSub": "Ya seas un fundador con una idea, un negocio listo para escalar o una corporación modernizándose a velocidad — tenemos el equipo adecuado, la experiencia correcta y el enfoque idóneo para hacerlo realidad.",
+    "whoLabel": "A quién ayudamos",
+    "whoTitle": "El ajuste perfecto para cada escala",
+    "capLabel": "Qué construimos",
+    "capTitle": "Entrega de espectro completo",
+    "whyLabel": "Por qué nosotros",
+    "whyTitle": "Construidos diferente",
+    "ctaLabel": "¿Listo?",
+    "ctaTitle": "Cuéntanos qué estás construyendo.",
+    "ctaSub": "Sin compromiso. Sin presentaciones de ventas. Solo una conversación sobre tu problema y cómo podemos resolverlo.",
+    "ctaBtn": "Iniciar una conversación",
+    "backBtn": "Volver al portafolio",
+    "tiers": {
+      "startup": {
+        "label": "Startup / Pequeña Empresa",
+        "headline": "Necesitas un socio de confianza, no un proveedor.",
+        "body": "Tienes una idea o un problema. Necesitas a alguien que lo analice contigo, diseñe la solución correcta y la construya — rápido. Trabajo directamente contigo, de principio a fin. Sin intermediarios, sin sobrecarga, solo ejecución precisa.",
+        "highlights": [
+          "Acceso directo a un ingeniero senior",
+          "De MVP a producción en semanas, no meses",
+          "Móvil, web o IA — lo hago todo",
+          "Modalidad flexible: por hora, proyecto o retención"
+        ],
+        "cta": "Hablar con Andres",
+        "badge": "Más personal"
+      },
+      "medium": {
+        "label": "Negocio en Crecimiento",
+        "headline": "Necesitas estructura, velocidad y un líder técnico.",
+        "body": "Tu producto está creciendo y necesitas a alguien que pueda liderar decisiones de arquitectura, escalar tu equipo y ser dueño de la entrega. Me incorporo como tu ancla técnica — diseñando sistemas que crecen contigo y trayendo ingenieros expertos cuando el alcance lo requiere.",
+        "highlights": [
+          "Andres como arquitecto líder y responsable de entrega",
+          "Diseño de sistemas escalable desde el primer día",
+          "Aumento de equipo conforme el proyecto crece",
+          "Enfoque AI-first integrado en tu hoja de ruta",
+          "Full-stack: frontend, backend, móvil, datos"
+        ],
+        "cta": "Definamos tu proyecto",
+        "badge": "Más popular"
+      },
+      "enterprise": {
+        "label": "Empresa / Gran Corporación",
+        "headline": "Necesitas un equipo probado que cruce fronteras.",
+        "body": "¿Transformación a gran escala, modernización o una plataforma desde cero? Contamos con un equipo verificado de ingenieros senior ubicados en EE.UU. y Costa Rica — zonas horarias compatibles, tarifas competitivas y el nivel de calidad que esperarías de las mejores firmas.",
+        "highlights": [
+          "Ingenieros senior en EE.UU. y Costa Rica",
+          "Superposición de zona horaria con EE.UU. para colaboración fluida",
+          "IA, nube, microservicios y datos a escala",
+          "Modelo de aumento de personal o entrega completa",
+          "Procesos empresariales: NDA, cumplimiento SOC-2"
+        ],
+        "cta": "Solicitar un equipo",
+        "badge": "Equipo completo"
+      }
+    },
+    "capabilities": {
+      "mobile": {
+        "title": "Móvil",
+        "items": [
+          "iOS y Android (React Native)",
+          "Publicación en App Store y Play Store",
+          "Arquitectura offline-first",
+          "Notificaciones push y sincronización en tiempo real",
+          "Optimización de rendimiento"
+        ]
+      },
+      "web": {
+        "title": "Web",
+        "items": [
+          "React / Next.js SPAs y SSR",
+          "APIs full-stack (Node, .NET, Python)",
+          "Plataformas de e-commerce y SaaS",
+          "Frontends de alto rendimiento",
+          "Accesibilidad y SEO"
+        ]
+      },
+      "data": {
+        "title": "Datos e IA",
+        "items": [
+          "Agentes y chatbots impulsados por LLMs",
+          "Pipelines RAG y búsqueda vectorial",
+          "Pipelines de datos y ETL",
+          "Dashboards de analítica",
+          "Integración de funcionalidades de IA en productos existentes"
+        ]
+      },
+      "cloud": {
+        "title": "Nube y DevOps",
+        "items": [
+          "Arquitectura Azure, AWS, GCP",
+          "Kubernetes y orquestación de contenedores",
+          "Pipelines CI/CD y GitOps",
+          "Infraestructura como Código",
+          "Optimización de costos"
+        ]
+      }
+    },
+    "reasons": {
+      "ai": {
+        "title": "Mentalidad AI-first",
+        "body": "Cada solución se evalúa para aprovechar la IA — desde la automatización hasta funcionalidades inteligentes integradas directamente en tu producto."
+      },
+      "team": {
+        "title": "Cobertura EE.UU. y Costa Rica",
+        "body": "Ingenieros en ambos mercados. Tarifas competitivas con zona horaria compatible con EE.UU. — lo mejor del nearshore sin concesiones."
+      },
+      "senior": {
+        "title": "Solo ingenieros senior",
+        "body": "Sin juniors en tu base de código. Cada ingeniero de tu proyecto tiene la experiencia para navegar la complejidad."
+      },
+      "delivery": {
+        "title": "Entrega de principio a fin",
+        "body": "Desde la arquitectura hasta la tienda de aplicaciones. Somos dueños del ciclo completo para que no tengas que coordinar con cinco proveedores diferentes."
+      }
+    }
+  }
+}

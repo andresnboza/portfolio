@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import { education, certifications } from '../data/resume'
 import { useInView } from '../hooks/useInView'
 import './Education.css'
@@ -21,6 +22,7 @@ function BadgeIcon() {
 }
 
 export default function Education() {
+  const { t } = useTranslation()
   const { ref: headRef, inView: headVisible } = useInView()
   const { ref: bodyRef, inView: bodyVisible } = useInView()
 
@@ -31,21 +33,18 @@ export default function Education() {
           ref={headRef as React.RefObject<HTMLDivElement>}
           className={`animate anim-fade-up${headVisible ? ' is-visible' : ''}`}
         >
-          <p className="section-label">Background</p>
-          <h2 className="section-title">Education & Certifications</h2>
+          <p className="section-label">{t('education.label')}</p>
+          <h2 className="section-title">{t('education.title')}</h2>
         </div>
 
         <div
           ref={bodyRef as React.RefObject<HTMLDivElement>}
           className={`edu__grid stagger-children${bodyVisible ? ' is-visible' : ''}`}
         >
-          {/* Education card */}
           <div className="edu__card">
-            <div className="edu__card-icon">
-              <GradIcon />
-            </div>
+            <div className="edu__card-icon"><GradIcon /></div>
             <div className="edu__card-body">
-              <p className="edu__card-label">Degree</p>
+              <p className="edu__card-label">{t('education.degreeLabel')}</p>
               <h3 className="edu__card-title">{education.degree}</h3>
               <p className="edu__card-sub">{education.emphasis}</p>
               <div className="edu__card-meta">
@@ -56,14 +55,11 @@ export default function Education() {
             </div>
           </div>
 
-          {/* Certification cards */}
           {certifications.map((cert, i) => (
             <div key={i} className="edu__card edu__card--cert">
-              <div className="edu__card-icon edu__card-icon--cert">
-                <BadgeIcon />
-              </div>
+              <div className="edu__card-icon edu__card-icon--cert"><BadgeIcon /></div>
               <div className="edu__card-body">
-                <p className="edu__card-label">Certification</p>
+                <p className="edu__card-label">{t('education.certLabel')}</p>
                 <h3 className="edu__card-title">{cert.name}</h3>
                 <div className="edu__card-meta">
                   <span>{cert.issuer}</span>

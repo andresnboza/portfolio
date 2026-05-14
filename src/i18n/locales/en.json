@@ -1,0 +1,265 @@
+{
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "education": "Education",
+    "projects": "Projects",
+    "contact": "Contact",
+    "portfolio": "Portfolio",
+    "letsTalk": "Let's Talk"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "tagline": "Building intelligent systems that scale — from architecture to deployment.",
+    "viewWork": "View my work",
+    "contact": "Contact me"
+  },
+  "about": {
+    "label": "About",
+    "title": "What I do",
+    "bio": [
+      "I'm a Senior Software Engineer with deep expertise in AI systems architecture. I design and build intelligent applications — from LLM-powered agents and RAG pipelines to production-grade APIs and full-stack products.",
+      "My focus is on bridging the gap between cutting-edge AI capabilities and real-world engineering: building systems that are reliable, maintainable, and actually solve the problem at hand.",
+      "I've worked across the full stack, led cross-functional teams, and shipped products used by thousands of users. Currently open to interesting problems at the intersection of AI and product."
+    ]
+  },
+  "experience": {
+    "label": "Experience",
+    "title": "Where I've worked",
+    "jobs": {
+      "serverless": [
+        "Led production readiness: resolved critical bugs, stabilized deployment pipelines, and reduced system downtime",
+        "Evaluated and improved API response times through profiling, query optimization, and caching strategies",
+        "Implemented async communication via Azure Service Bus with dead-letter queue handling and retry policies",
+        "Architected OAuth2-secured SAP/ERP integrations managing invoice and inventory flows",
+        "Developed new product features from design to deployment on Azure Container Apps",
+        "Reduced cloud costs by optimizing Azure Monitor telemetry and restructuring logging strategies",
+        "Delivered a mobile application for heavy equipment rental through full iOS and Android app store lifecycles",
+        "Built a loyalty web and mobile platform with scalable backend services and high-performance frontend interfaces",
+        "Acted as technical bridge for QA teams through pair programming and initiated comprehensive project documentation with architectural flowcharts"
+      ],
+      "ibm": [
+        "Advanced the Multi-Cloud Management Platform (MCMP) by implementing GitOps practices using ArgoCD and maintaining Kubernetes clusters",
+        "Engineered automated CI/CD pipelines with GitHub Actions and Ansible for consistent multi-cloud asset deployments across global tenants",
+        "Created standardized Infrastructure-as-Code templates for cloud resource provisioning with security and compliance across AWS, Azure, and GCP"
+      ],
+      "midware": [
+        "Reduced data migration time from one week to two hours through rigorous database optimization",
+        "Developed full-stack features for US-based e-commerce companies using modern JavaScript frameworks"
+      ],
+      "grupoAsesor": [
+        "Contributed to a proprietary .NET Core framework, enhancing backend templates and interface development"
+      ],
+      "ucr": [
+        "Independently designed and deployed a comprehensive MEAN stack application, leading the entire SDLC"
+      ],
+      "tekExperts": [
+        "Provided advanced Linux server troubleshooting, resolving critical system crashes and performance bottlenecks"
+      ]
+    }
+  },
+  "education": {
+    "label": "Background",
+    "title": "Education & Certifications",
+    "degreeLabel": "Degree",
+    "certLabel": "Certification"
+  },
+  "projects": {
+    "label": "Projects",
+    "title": "Things I've built and helped transform",
+    "otherLabel": "Other projects",
+    "detailsBtn": "Details",
+    "keyHighlights": "Key highlights",
+    "techStack": "Tech stack",
+    "sourceBtn": "Source",
+    "liveBtn": "Live demo",
+    "items": {
+      "oilTerminal": {
+        "description": "Microservices system for a global oil terminal client — led production readiness, feature delivery, and end-to-end deployment.",
+        "longDescription": "A complex, distributed microservices platform for a global oil terminal management client. Brought in to drive production readiness — stabilizing the system, eliminating critical bugs, improving response times, and delivering new features while owning end-to-end deployment.",
+        "highlights": [
+          "Led production readiness: resolved critical bugs, stabilized deployment pipelines, and reduced system downtime",
+          "Evaluated and improved API response times through profiling, query optimization, and caching strategies",
+          "Implemented async communication via Azure Service Bus with dead-letter queue handling and retry policies",
+          "Architected OAuth2-secured SAP/ERP integrations managing invoice and inventory flows",
+          "Developed new product features from design to deployment on Azure Container Apps",
+          "Reduced cloud costs by optimizing Azure Monitor telemetry and restructuring logging strategies"
+        ]
+      },
+      "heavyEquipment": {
+        "description": "Cross-platform mobile application for heavy equipment rental, shipped through iOS and Android stores.",
+        "longDescription": "A full-lifecycle mobile application for a heavy equipment rental company, enabling customers to browse inventory, manage reservations, and track equipment availability in real time.",
+        "highlights": [
+          "Managed the full app lifecycle from development to publication on both iOS and Android stores",
+          "Built scalable backend services to handle real-time equipment availability and booking flows",
+          "Integrated push notifications and in-app tracking for rental status updates"
+        ]
+      },
+      "hospitality": {
+        "description": "Web and mobile loyalty platform for a hospitality brand with high-performance frontend and scalable backend.",
+        "longDescription": "A loyalty and rewards platform for a hospitality brand, enabling guests to accumulate points, redeem rewards, and manage their profile across web and mobile surfaces.",
+        "highlights": [
+          "Designed scalable backend services supporting thousands of concurrent loyalty transactions",
+          "Built high-performance frontend interfaces with smooth UX for web and mobile",
+          "Implemented secure authentication and points ledger with audit trails"
+        ]
+      },
+      "mcmp": {
+        "description": "GitOps-driven platform managing Kubernetes clusters and CI/CD pipelines across AWS, Azure, and GCP.",
+        "longDescription": "Contributed to IBM/Kyndryl's Multi-Cloud Management Platform (MCMP), enabling enterprise clients to provision, manage, and monitor cloud resources across multiple providers from a single control plane.",
+        "highlights": [
+          "Implemented GitOps workflows using ArgoCD for declarative, version-controlled deployments",
+          "Engineered automated CI/CD pipelines with GitHub Actions and Ansible across global tenants",
+          "Created standardized IaC templates for cloud resource provisioning with security and compliance guardrails"
+        ]
+      },
+      "ucr": {
+        "description": "End-to-end MEAN stack application designed and deployed independently for the University of Costa Rica.",
+        "longDescription": "A comprehensive full-stack application built for the University of Costa Rica, independently leading the entire Software Development Life Cycle from requirements gathering to production deployment.",
+        "highlights": [
+          "Led the full SDLC independently — architecture, development, testing, and deployment",
+          "Built RESTful APIs with Node.js/Express and a dynamic Angular frontend",
+          "Deployed on cloud infrastructure with CI/CD automation"
+        ]
+      }
+    }
+  },
+  "contact": {
+    "label": "Contact",
+    "title": "Let's work together",
+    "blurb": "I'm currently open to new opportunities — whether it's a full-time role, contract work, or a conversation about an interesting problem. My inbox is always open.",
+    "nameLabel": "Name",
+    "namePlaceholder": "Your name",
+    "emailLabel": "Your email",
+    "emailPlaceholder": "your@email.com",
+    "subjectLabel": "Subject",
+    "subjectPlaceholder": "What's this about?",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Tell me about your project...",
+    "submitBtn": "Send message",
+    "sendingBtn": "Sending…",
+    "successMsg": "Message sent! I'll get back to you soon.",
+    "errorMsg": "Something went wrong. Try emailing me directly.",
+    "builtBy": "Designed & built by"
+  },
+  "services": {
+    "label": "Work with us",
+    "heroTitle": "Let's talk about",
+    "heroTitleAccent": "your project.",
+    "heroSub": "Whether you're a founder with an idea, a business ready to scale, or a corporation modernizing at speed — we have the right team, the right experience, and the right approach to make it happen.",
+    "whoLabel": "Who we help",
+    "whoTitle": "The right fit for every scale",
+    "capLabel": "What we build",
+    "capTitle": "Full-spectrum delivery",
+    "whyLabel": "Why us",
+    "whyTitle": "Built different",
+    "ctaLabel": "Ready?",
+    "ctaTitle": "Tell us what you're building.",
+    "ctaSub": "No commitment. No sales deck. Just a conversation about your problem and how we can solve it.",
+    "ctaBtn": "Start a conversation",
+    "backBtn": "Back to portfolio",
+    "tiers": {
+      "startup": {
+        "label": "Startup / Small Business",
+        "headline": "You need a trusted partner, not a vendor.",
+        "body": "You have an idea or a problem. You need someone who can think it through with you, architect the right solution, and build it — fast. I work directly with you, end to end. No middlemen, no overhead, just sharp execution.",
+        "highlights": [
+          "Direct access to a senior engineer",
+          "MVP to production in weeks, not months",
+          "Mobile, web, or AI — I do it all",
+          "Flexible engagement: hourly, project, or retainer"
+        ],
+        "cta": "Talk to Andres",
+        "badge": "Most personal"
+      },
+      "medium": {
+        "label": "Growing Business",
+        "headline": "You need structure, speed, and a technical leader.",
+        "body": "Your product is growing and you need someone who can lead architecture decisions, scale your team, and own delivery. I step in as your technical anchor — designing systems that grow with you and bringing in sharp engineers when the scope demands it.",
+        "highlights": [
+          "Andres as lead architect and delivery owner",
+          "Scalable system design from day one",
+          "Team augmentation as the project scales",
+          "AI-first approach built into your roadmap",
+          "Full-stack: frontend, backend, mobile, data"
+        ],
+        "cta": "Let's scope your project",
+        "badge": "Most popular"
+      },
+      "enterprise": {
+        "label": "Enterprise / Large Corporation",
+        "headline": "You need a proven team across borders.",
+        "body": "Large-scale transformation, modernization, or a greenfield platform? We bring a vetted team of senior engineers placed in both the US and Costa Rica — overlapping time zones, competitive rates, and the caliber you'd expect from top-tier firms.",
+        "highlights": [
+          "Senior engineers in the US and Costa Rica",
+          "US time-zone overlap for seamless collaboration",
+          "AI, cloud, microservices, and data at scale",
+          "Staff augmentation or full delivery model",
+          "NDA-ready, SOC-2 aware, enterprise processes"
+        ],
+        "cta": "Request a team",
+        "badge": "Full team"
+      }
+    },
+    "capabilities": {
+      "mobile": {
+        "title": "Mobile",
+        "items": [
+          "iOS & Android (React Native)",
+          "App Store & Play Store publishing",
+          "Offline-first architecture",
+          "Push notifications & real-time sync",
+          "Performance optimization"
+        ]
+      },
+      "web": {
+        "title": "Web",
+        "items": [
+          "React / Next.js SPAs & SSR",
+          "Full-stack APIs (Node, .NET, Python)",
+          "E-commerce & SaaS platforms",
+          "High-performance frontends",
+          "Accessibility & SEO"
+        ]
+      },
+      "data": {
+        "title": "Data & AI",
+        "items": [
+          "LLM-powered agents & chatbots",
+          "RAG pipelines & vector search",
+          "Data pipelines & ETL",
+          "Analytics dashboards",
+          "AI feature integration into existing products"
+        ]
+      },
+      "cloud": {
+        "title": "Cloud & DevOps",
+        "items": [
+          "Azure, AWS, GCP architecture",
+          "Kubernetes & container orchestration",
+          "CI/CD pipelines & GitOps",
+          "Infrastructure as Code",
+          "Cost optimization"
+        ]
+      }
+    },
+    "reasons": {
+      "ai": {
+        "title": "AI-first mindset",
+        "body": "Every solution is evaluated for AI leverage — from automation to intelligent features built directly into your product."
+      },
+      "team": {
+        "title": "US & Costa Rica coverage",
+        "body": "Engineers placed in both markets. Competitive rates with US-overlap time zones — the best of nearshore without the trade-offs."
+      },
+      "senior": {
+        "title": "Senior-level only",
+        "body": "No juniors parachuted into your codebase. Every engineer on your project has the scar tissue to navigate complexity."
+      },
+      "delivery": {
+        "title": "End-to-end delivery",
+        "body": "From architecture to app store. We own the full lifecycle so you never have to coordinate between five different vendors."
+      }
+    }
+  }
+}
