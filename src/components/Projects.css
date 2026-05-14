@@ -1,0 +1,138 @@
+.projects__featured {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+.project-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.75rem;
+  cursor: pointer;
+  transition: border-color 0.25s, background 0.25s, transform 0.25s, box-shadow 0.25s;
+  outline: none;
+}
+
+.project-card:hover,
+.project-card:focus-visible {
+  border-color: var(--border-hover);
+  background: var(--bg-card-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(124, 106, 247, 0.08);
+}
+
+.project-card:focus-visible {
+  box-shadow: 0 0 0 2px var(--accent);
+}
+
+.project-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+}
+
+.project-card__name {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.project-card--small .project-card__name {
+  font-size: 0.9375rem;
+}
+
+.project-card__links {
+  display: flex;
+  gap: 0.75rem;
+  color: var(--text-muted);
+}
+
+.project-card__links a {
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+
+.project-card__links a:hover {
+  color: var(--accent);
+}
+
+.project-card__desc {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+}
+
+.project-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.project-card__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.skill-tag--more {
+  color: var(--accent);
+  border-color: var(--accent-dim);
+}
+
+.project-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--accent);
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity 0.2s, transform 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.project-card:hover .project-card__cta,
+.project-card:focus-visible .project-card__cta {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.projects__others-label {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.projects__others-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+/* skill-tag shared */
+.skill-tag {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 4px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.skill-tag:hover {
+  border-color: var(--accent-dim);
+  color: var(--text-secondary);
+}
